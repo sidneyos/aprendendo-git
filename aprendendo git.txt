@@ -1,0 +1,307 @@
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git
+$ git init
+Initialized empty Git repository in C:/Users/sidiney/Documents/git/.git/
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        meu codigo.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git add "meu codigo.txt"
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   meu codigo.txt
+
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   meu codigo.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        arquivo.py.txt
+        teste.png.txt
+        texto.html.txt
+
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git add .
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   arquivo.py.txt
+        new file:   meu codigo.txt
+        new file:   teste.png.txt
+        new file:   texto.html.txt
+
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git commit -m "commit inicial"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'sidiney@DESKTOP-MCL1MV0.(none)')
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git config --global user.email "sidneyos@icloud.com"
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git config --global user.name "sidiney oliveira"
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git commit -m "commit inicial"
+[master (root-commit) cbfb596] commit inicial
+ 4 files changed, 1 insertion(+)
+ create mode 100644 arquivo.py.txt
+ create mode 100644 meu codigo.txt
+ create mode 100644 teste.png.txt
+ create mode 100644 texto.html.txt
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git remote add origin https://github.com/sidneyos/aprendendo-git
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git push git push --set-upstream origin master
+error: src refspec push does not match any
+error: src refspec origin does not match any
+error: failed to push some refs to 'git'
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git push --set-upstream origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 312 bytes | 52.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/sidneyos/aprendendo-git/pull/new/master
+remote:
+To https://github.com/sidneyos/aprendendo-git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   meu codigo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git add .
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   meu codigo.txt
+
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git commit -m "atualizacao codigo"
+[master 20c5439] atualizacao codigo
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 305 bytes | 76.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/sidneyos/aprendendo-git
+   cbfb596..20c5439  master -> master
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git reflog
+20c5439 (HEAD -> master, origin/master) HEAD@{0}: commit: atualizacao codigo
+cbfb596 HEAD@{1}: commit (initial): commit inicial
+
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$
+
+git reset --hard => e o codigo da versão para mudar de versão 
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git branch
+* master
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git branch staging
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git branch
+* master
+  staging
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git checkout staging
+Switched to branch 'staging'
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (staging)
+$ git branch
+  master
+* staging
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (staging)
+$ git status
+On branch staging
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   meu codigo.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        aprendendo git.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (staging)
+$ git add .
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (staging)
+$ git commit -m "adicionando codigo"
+[staging 3ff42af] adicionando codigo
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (staging)
+$ git status
+On branch staging
+nothing to commit, working tree clean
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (staging)
+$ git push
+fatal: The current branch staging has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin staging
+
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (staging)
+$  git push --set-upstream origin staging
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 304 bytes | 60.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'staging' on GitHub by visiting:
+remote:      https://github.com/sidneyos/aprendendo-git/pull/new/staging
+remote:
+To https://github.com/sidneyos/aprendendo-git
+ * [new branch]      staging -> staging
+Branch 'staging' set up to track remote branch 'staging' from 'origin'.
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (staging)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git branch
+* master
+  staging
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git merge staging
+Updating 20c5439..3ff42af
+Fast-forward
+ meu codigo.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/sidneyos/aprendendo-git
+   20c5439..3ff42af  master -> master
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git pull
+fatal: unable to access 'https://github.com/sidneyos/aprendendo-git/': Could not resolve host: github.com
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git pull
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 597 bytes | 18.00 KiB/s, done.
+From https://github.com/sidneyos/aprendendo-git
+ * [new branch]      main       -> origin/main
+Already up to date.
+
+sidiney@DESKTOP-MCL1MV0 MINGW64 ~/Documents/git (master)
+$ git merge staging
+Already up to date.
